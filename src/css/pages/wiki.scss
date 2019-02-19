@@ -1,0 +1,8 @@
+#wiki {
+	#wiki-home-page {
+		//Medium up
+		@media screen and (min-device-width: $small) {
+			text-align: center;
+		}
+	}
+}

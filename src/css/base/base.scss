@@ -1,0 +1,121 @@
+// General Styles
+html {
+	box-sizing: border-box;
+	overflow-y: scroll;
+}
+* {
+	box-sizing: inherit;
+}
+body {
+	font-family: $roboto;
+}
+main {
+	overflow: auto;
+}
+
+::-webkit-scrollbar {
+	width: 0px; /* remove scrollbar space */
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-family: $merriweather;
+}
+
+hr {
+	display: block;
+	clear: both;
+	border: 0;
+	height: 1px;
+	background: #333;
+	background-image: linear-gradient(to right, #ccc, #333, #ccc);
+	margin: 20px 0;
+}
+
+button {
+	cursor: pointer;
+	background-color: $primary;
+	padding: 10px 15px;
+	border: none;
+	border-radius: 3px;
+	text-decoration: none;
+	text-transform: none;
+	color: white;
+
+	&:hover {
+		background-color: $primaryLighten1;
+	}
+
+	&:focus {
+		outline: 0;
+	}
+}
+
+h1 {
+	text-align: center;
+}
+
+.link-title {
+	a {
+		color: inherit;
+		text-decoration: none;
+	}
+}
+
+// Layout
+
+html,
+body,
+#app {
+	height: 100%;
+}
+
+.app-container {
+	width: 100%;
+	height: 100%;
+
+	.nav {
+		position: fixed;
+		top: 0;
+		background-color: $primary;
+		width: 20%;
+		height: 100%;
+
+		//Small
+		@media screen and (max-device-width: $small) {
+			width: 100%;
+			height: 75px;
+		}
+	}
+
+	main {
+		display: flex;
+		flex-direction: column;
+		min-height: 100%;
+		margin-left: 20%;
+
+		//Small
+		@media screen and (max-device-width: $small) {
+			min-height: calc(100% - 75px);
+			margin-left: 0;
+			padding-top: 75px;
+		}
+
+		.content-container {
+			flex-grow: 1;
+			width: 80%;
+			margin: 60px auto;
+
+			//Small
+			@media screen and (max-device-width: $small) {
+				width: 100%;
+				margin: 0;
+				padding: 20px;
+			}
+		}
+	}
+}

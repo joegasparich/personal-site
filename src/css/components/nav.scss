@@ -1,0 +1,162 @@
+.nav {
+	display: flex;
+	height: 100%;
+	color: white;
+	// padding: 10px;
+	flex-direction: column;
+
+	//Small
+	@media screen and (max-device-width: $small) {
+		padding: 0 10px;
+		flex-direction: row;
+	}
+
+	#joe {
+		border-radius: 99999px;
+		display: block; //block
+		margin: 30px auto;
+		width: 60%;
+		max-width: 170px;
+
+		//Small
+		@media screen and (max-device-width: $small) {
+			display: none;
+		}
+	}
+
+	h1 {
+		a {
+			color: white;
+			text-decoration: none;
+		}
+
+		//Medium
+		@media screen and (min-device-width: $small) and (max-device-width: $medium) {
+			font-size: 20px;
+		}
+
+		//Small
+		@media screen and (max-device-width: $small) {
+			font-size: 20px;
+			margin: auto 10px;
+			flex-grow: 1;
+		}
+	}
+
+	#links {
+		display: flex;
+		flex-grow: 1;
+		flex-direction: column;
+
+		//Small
+		@media screen and (max-device-width: $small) {
+			flex-direction: row;
+			flex-grow: 0;
+		}
+
+		#link-home {
+			//Small
+			@media screen and (max-device-width: $small) {
+				display: none;
+			}
+		}
+
+		a {
+			text-decoration: none;
+
+			.nav-item {
+				display: block;
+				min-height: 64px;
+				text-transform: none;
+				width: 100%;
+				background-color: $primary;
+				font-size: 18px;
+				padding: 0 30px;
+
+				//Small
+				@media screen and (max-device-width: $small) {
+					padding: 20px;
+					height: 100%;
+				}
+
+				&.selected {
+					text-decoration: underline;
+					text-underline-position: under;
+				}
+				&:hover {
+					background-color: $primaryLighten1;
+				}
+
+				span {
+					//Small
+					@media screen and (max-device-width: $small) {
+						display: none;
+					}
+				}
+
+				svg {
+					//Medium up
+					@media screen and (min-device-width: $small) {
+						display: none;
+					}
+				}
+			}
+
+			.nav-sub-item {
+				display: block;
+				padding: 0 30px;
+				min-height: 48px;
+				text-transform: none;
+				width: 100%;
+				color: white;
+				background-color: $primaryDarken1;
+				font-size: 14px;
+
+				&.selected {
+					text-decoration: underline;
+					text-underline-position: under;
+				}
+				&:hover {
+					background-color: $primaryLighten1;
+				}
+			}
+		}
+	}
+
+	#email {
+		text-align: center;
+		a {
+			color: white;
+		}
+
+		//Medium
+		@media screen and (min-device-width: $small) and (max-device-width: $medium) {
+			font-size: 12px;
+		}
+
+		//Small
+		@media screen and (max-device-width: $small) {
+			display: none;
+		}
+	}
+
+	#social-media {
+		.icon {
+			color: white;
+
+			&:hover {
+				background-color: $primaryLighten1;
+			}
+
+			//Medium
+			@media screen and (min-device-width: $small) and (max-device-width: $medium) {
+				padding: 0;
+			}
+		}
+
+		//Small
+		@media screen and (max-device-width: $small) {
+			display: none;
+		}
+	}
+}

@@ -1,0 +1,28 @@
+#home {
+	#bio {
+		margin: auto;
+		width: 70%;
+		padding-bottom: 30px;
+
+		//Small
+		@media screen and (max-device-width: $small) {
+			width: 100%;
+			padding-bottom: 10px;
+
+			#bio-pic {
+				display: block;
+				margin: 0 auto 30px;
+				width: 70%;
+			}
+		}
+	}
+
+	#cv {
+		width: 100%;
+		text-align: center;
+	}
+
+	.experience {
+		list-style: none;
+	}
+}

@@ -1,0 +1,6 @@
+.sub-nav {
+	//Small
+	@media screen and (max-device-width: $small) {
+		display: none;
+	}
+}
