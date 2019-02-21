@@ -1,0 +1,25 @@
+#flexbox {
+	.flex-container {
+		display: flex;
+		margin: 20px auto;
+		width: 70%;
+		border: 1px solid black;
+		border-radius: 5px;
+		padding: 5px;
+	}
+
+	.flex-item {
+		background-color: $primary;
+		color: white;
+		border-radius: 5px;
+		min-width: 50px;
+		min-height: 50px;
+		margin: 2px;
+		display: flex;
+		justify-content: center;
+
+		p {
+			text-align: center;
+		}
+	}
+}

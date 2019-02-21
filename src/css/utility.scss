@@ -12,6 +12,12 @@ pre {
 	margin-right: auto;
 }
 
+.center-image {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
 .center-elements {
 	display: flex;
 	flex-wrap: wrap;
@@ -21,12 +27,13 @@ pre {
 @media screen and (min-device-width: $small) {
 	.row-m {
 		display: flex;
+		flex-wrap: wrap;
 		width: 100%;
 	}
 	.col-3-m {
 		flex-grow: 0;
 		max-width: 25%;
-		flex-basis: 75%;
+		flex-basis: 25%;
 	}
 	.col-4-m {
 		flex-grow: 0;
@@ -67,12 +74,13 @@ pre {
 @media screen and (min-device-width: $medium) {
 	.row-l {
 		display: flex;
+		flex-wrap: wrap;
 		width: 100%;
 	}
 	.col-3-l {
 		flex-grow: 0;
 		max-width: 25%;
-		flex-basis: 75%;
+		flex-basis: 25%;
 	}
 	.col-4-l {
 		flex-grow: 0;
