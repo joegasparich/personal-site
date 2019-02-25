@@ -24,19 +24,19 @@ export default class Nav extends Component {
 						</button>
 					</Link>
 					<Link id="link-projects" to="/projects">
-						<button className={"nav-item " + (window.location.pathname.includes("projects") && "selected")}>
+						<button className={"nav-item " + (window.location.pathname.indexOf("projects") >= 0 && "selected")}>
 							<FontAwesomeIcon icon={faBox} />
 							<span>Projects</span>
 						</button>
 					</Link>
 					<Link id="link-wiki" to="/wiki">
-						<button className={"nav-item " + (window.location.pathname.includes("wiki") && "selected")}>
+						<button className={"nav-item " + (window.location.pathname.indexOf("wiki") >= 0 && "selected")}>
 							<FontAwesomeIcon icon={faGlobe} />
 							<span>Wiki</span>
 						</button>
 					</Link>
 					<Link id="link-music" to="/music">
-						<button className={"nav-item " + (window.location.pathname.includes("music") && "selected")}>
+						<button className={"nav-item " + (window.location.pathname.indexOf("music" >= 0) && "selected")}>
 							<FontAwesomeIcon icon={faMusic} />
 							<span>Music</span>
 						</button>
