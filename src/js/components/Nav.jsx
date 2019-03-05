@@ -36,7 +36,7 @@ export default class Nav extends Component {
 						</button>
 					</Link>
 					<Link id="link-music" to="/music">
-						<button className={"nav-item " + (window.location.pathname.indexOf("music" >= 0) && "selected")}>
+						<button className={"nav-item " + (window.location.pathname.indexOf("music") >= 0 && "selected")}>
 							<FontAwesomeIcon icon={faMusic} />
 							<span>Music</span>
 						</button>
