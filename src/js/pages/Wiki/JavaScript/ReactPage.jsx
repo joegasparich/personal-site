@@ -42,7 +42,8 @@ export default class ReactPage extends Component {
 				<section>
 					<h3>State</h3>
 					<p>
-						State can only be stored in class style components. It is accessed via <code>this.state</code> and can be updated via <code>this.setState()</code>.
+						State can only be stored in class style components (<a href="https://reactjs.org/docs/hooks-intro.html">for now</a>). It is accessed via <code>this.state</code> and can be
+						updated via <code>this.setState()</code>.
 					</p>
 					<p>
 						Note that <code>setState()</code> is asynchronous, and you can’t rely on the state value when setting it.

@@ -97,6 +97,18 @@ export default class GitPage extends Component {
 					</pre>
 				</section>
 				<hr />
+				<section>
+					<h3>Misc</h3>
+					<p>Add a remote repository</p>
+					<pre>
+						<code className="language-none">{`git remote add origin http://link.com`}</code>
+					</pre>
+					<p>Clear all cached files</p>
+					<pre>
+						<code className="language-none">{`git rm -r --cached .`}</code>
+					</pre>
+				</section>
+				<hr />
 				<img src="https://i.imgur.com/fHjhYQZ.png" alt="Diagram of git commands" width="100%" />
 				<hr />
 				<p>References</p>

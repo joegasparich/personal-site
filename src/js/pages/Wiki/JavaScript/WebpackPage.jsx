@@ -71,6 +71,36 @@ export default class NodePage extends Component {
 				</section>
 				<hr />
 				<section>
+					<h3>Resolve</h3>
+					<p>Resolve defines how modules are resolved.</p>
+					<p>
+						<code>extensions</code> automatically resolves certain extensions{" "}
+					</p>
+					<pre>
+						<code className="language-js">{`resolve:\n	{extensions: [".ts", ".js"],\n}`}</code>
+					</pre>
+					<p>So for example, you can leave the extension off when importing:</p>
+					<pre>
+						<code className="language-js">{`import File from '../path/to/file';`}</code>
+					</pre>
+					<h3>Alias</h3>
+					<p>
+						<code>alias</code> creates an alias to a certain path.
+					</p>
+					<pre>
+						<code className="language-js">{`resolve:\n	alias: {\n	"@lib": path.resolve(__dirname, "../lib"),	\n},\n}`}</code>
+					</pre>
+					<p>Which changes something like:</p>
+					<pre>
+						<code className="language-js">{`import Utility from '../../../lib/utility';`}</code>
+					</pre>
+					<p>to:</p>
+					<pre>
+						<code className="language-js">{`import Utility from '@lib/utility';`}</code>
+					</pre>
+				</section>
+				<hr />
+				<section>
 					<h3>Creating Multiple Entry/Outputs</h3>
 					<p>
 						You can pass the <code>module.exports</code> an array of configs in order to create multiple bundles.

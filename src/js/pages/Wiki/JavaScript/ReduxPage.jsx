@@ -39,6 +39,21 @@ export default class ReduxPage extends Component {
 				<pre>
 					<code className="language-js">{`function rootReducer(state = initialState, action) {\n	switch (action.type) {\n		case ADD_USER:\n			return Object.assign({}, state, {\n				users: state.users.concat(action.user)\n			})\n		default:\n			return state\n	}\n}`}</code>
 				</pre>
+				<p>
+					Reducers should be pure functions, and should only return a new version of the state. This allows actions to be entirely predictable and always
+					behave in the same way.
+				</p>
+				<hr/>
+				<h4>Middleware</h4>
+				<p>
+					What if we want an action to do something other than change the state, for example perform an API call? 
+					This clashes with the pattern of reducers being pure.
+				</p>
+				<p>Redux employs the use of middleware to solve this problem. Middleware receive the action before it reaches the reducer.</p>
+				<p>Here is an example of middleware that logs all actions that are sent to the reducer:</p>
+				<pre>
+					<code className="language-js">{`const logger = store => next => action => {\n	console.log("dispatching", action);\n	const result = next(action);\n	console.log("next state", store.getState());\n	return result;\n};\n\nexport default logger;`}</code>
+				</pre>
 			</div>
 		);
 	}
