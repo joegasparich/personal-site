@@ -7,38 +7,44 @@ import BabelPage from "./JavaScript/BabelPage";
 import WebpackPage from "./JavaScript/WebpackPage";
 import ReactPage from "./JavaScript/ReactPage";
 import GraphQLPage from "./JavaScript/GraphQLPage";
+import ReduxPage from "./JavaScript/ReduxPage";
 
 export const javascriptPages = [
 	{
 		title: "Node",
 		location: "/wiki/js/node",
-		component: NodePage
+		component: NodePage,
 	},
 	{
 		title: "Express",
 		location: "/wiki/js/express",
-		component: ExpressPage
+		component: ExpressPage,
 	},
 	{
 		title: "Babel",
 		location: "/wiki/js/babel",
-		component: BabelPage
+		component: BabelPage,
 	},
 	{
 		title: "Webpack",
 		location: "/wiki/js/webpack",
-		component: WebpackPage
+		component: WebpackPage,
 	},
 	{
 		title: "React",
 		location: "/wiki/js/react",
-		component: ReactPage
+		component: ReactPage,
+	},
+	{
+		title: "Redux",
+		location: "/wiki/js/redux",
+		component: ReduxPage,
 	},
 	{
 		title: "GraphQL",
 		location: "/wiki/js/graphql",
-		component: GraphQLPage
-	}
+		component: GraphQLPage,
+	},
 ];
 
 export default class JavaScriptPage extends Component {
